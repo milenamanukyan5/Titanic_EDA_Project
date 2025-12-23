@@ -1,24 +1,49 @@
-# Titanic EDA and Feature Engineering
+# 🚢 Titanic Survival Analysis: EDA & Feature Engineering
 
-## Project Title
-Titanic EDA and Feature Engineering
+![Python](https://img.shields.io/badge/Python-3.x-blue?style=flat&logo=python)
+![Library](https://img.shields.io/badge/Library-Pandas%20%7C%20Seaborn-orange)
+![Status](https://img.shields.io/badge/Status-Completed-success)
 
-## Goal
-The main goal of this project is to analyze the Titanic passengers' data to identify patterns and factors that influenced survival rates. We performed data cleaning, exploratory data analysis (EDA), and feature engineering to prepare the data for machine learning models.
+## 📌 Project Overview
+This project is part of a university assignment to analyze the famous **Titanic dataset**. The main objective is to perform Exploratory Data Analysis (EDA), clean the data, and engineer new features to understand the factors affecting passenger survival rates.
 
-## Technologies Used
-* **Python**
-* **Pandas** (for data manipulation)
-* **Seaborn & Matplotlib** (for visualization)
+## 📂 Dataset
+The data is obtained from [Kaggle Titanic Competition](https://www.kaggle.com/c/titanic/data).
+* **Train Data:** Used for analysis and pattern recognition (contains `Survived` column).
 
-## Key Findings & Conclusions
-Based on the analysis, we found the following:
+## 🛠️ Key Techniques Applied
 
-1.  **Gender:** Females had a significantly higher survival rate (~74%) compared to males (~18%).
-2.  **Class (Social Status):** Passengers in 1st class had the highest survival chance, while 3rd class passengers had the lowest.
-3.  **Family Size:** Passengers traveling alone or with very large families had lower survival rates compared to those with small families (2-4 members).
-4.  **Fare:** There is a positive correlation between Fare and Survival; higher fares are linked to better survival chances.
-5.  **Title Extraction:** We successfully extracted titles (Mr, Mrs, Miss, Master) from names, which proved to be a strong predictor of survival (e.g., 'Mr' has a very low survival rate).
+### 1. Data Cleaning
+* **Handling Missing Values:**
+    * `Age`: Imputed based on **Pclass** averages (wealthier passengers tended to be older).
+    * `Embarked`: Filled with the mode ('S').
+    * `Cabin`: Dropped due to >77% missing data.
+* **Data Type Conversion:** Converted categorical variables into numeric formats for analysis.
 
-## Visualizations
-Check the `.ipynb` file to see the heatmaps and bar charts representing these findings.
+### 2. Feature Engineering
+* **Title Extraction:** Extracted titles (Mr, Mrs, Miss, Master) from names to categorize social status. Grouped rare titles (e.g., *the Countess*, *Col*, *Dr*) into an 'Other' category.
+* **Family Size:** Created a new feature combining `SibSp` and `Parch` to analyze family survival patterns.
+* **IsAlone:** Created a binary feature to identify passengers traveling solo.
+
+### 3. Exploratory Data Analysis (EDA)
+* **Visualizations:** Used Heatmaps, Bar Plots, and Count Plots to visualize correlations.
+* **Correlation Matrix:** Analyzed the linear relationship between features and survival.
+
+## 📊 Key Findings
+Based on the analysis, the following patterns were identified:
+1.  **Women First:** Female passengers had a ~74% survival rate, while males had only ~18%.
+2.  **Socio-Economic Status:** 1st Class passengers had significantly higher survival chances than 3rd Class.
+3.  **Family Factor:** Small families (2-4 members) had better survival rates than those alone or with large families.
+4.  **Titles Matter:** The title 'Mr' has a strong negative correlation with survival, while 'Mrs' and 'Miss' correlate positively.
+
+## 🚀 How to Run
+1.  Clone the repository.
+2.  Open `Titanic_EDA_Project.ipynb` in Jupyter Notebook or Google Colab.
+3.  Ensure `train.csv` is in the same directory.
+4.  Run all cells to see the analysis and visualizations.
+
+---
+
+
+*Author: [Քո Անուն Ազգանունը]*
+*University Project - [Տարեթիվ]*
