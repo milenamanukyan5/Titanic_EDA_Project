@@ -41,9 +41,3 @@ Based on the analysis, the following patterns were identified:
 2.  Open `Titanic_EDA_Project.ipynb` in Jupyter Notebook or Google Colab.
 3.  Ensure `train.csv` is in the same directory.
 4.  Run all cells to see the analysis and visualizations.
-
----
-
-
-*Author: [Քո Անուն Ազգանունը]*
-*University Project - [Տարեթիվ]*
